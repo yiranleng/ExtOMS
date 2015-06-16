@@ -1,0 +1,31 @@
+#center {
+	height: 400px;
+	width: 600px;
+	clear: both;
+	margin: auto;
+	background-attachment: scroll;
+	background-image: url(login.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: none;
+	vertical-align: baseline;
+	text-align: center;
+	position: static;
+}
+#inner {
+	color: #000066;
+	background-position: left bottom;
+	text-align: left;
+	vertical-align: text-bottom;
+	float: left;
+	height: 49px;
+	width: 260px;
+	margin: auto;
+	position: absolute;
+	top: 380px;
+	right: 333px;
+	left: 634px;
+	bottom: auto;
+	font-family: "ÐÂËÎÌå";
+	background-repeat: no-repeat;
+}

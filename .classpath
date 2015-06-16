@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="web/|driver/|util/|service/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/web"/>
+	<classpathentry kind="src" path="src/service"/>
+	<classpathentry kind="src" path="src/driver"/>
+	<classpathentry kind="src" path="src/util"/>
+	<classpathentry kind="src" path="resource"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/common/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/common/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/common/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/common/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/common/slf4j-jdk14-1.6.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dbcp/commons-dbcp-1.2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dbcp/commons-pool-1.4.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/cglib-2.2.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/hibernate-core-4.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/hibernate-entitymanager-4.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/avro-1.5.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/hibernate-core-4.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/lucene-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/paranamer-2.3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/snappy-java-1.0.1-rc3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-4.1.0/required/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mysql/mysql-connector-java-5.1.6-bin.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.aop-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.asm-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.aspects-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.beans-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.context-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.context.support-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.core-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.expression-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.instrument-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.instrument.tomcat-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.jdbc-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.jms-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.orm-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.oxm-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.test-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.transaction-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.web-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.web.portlet-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.web.servlet-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/org.springframework.web.struts-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-3.1.4/springside3-core-3.3.4.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/springSecurity-3.0.3/spring-security-acl-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/springSecurity-3.0.3/spring-security-config-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/springSecurity-3.0.3/spring-security-core-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/springSecurity-3.0.3/spring-security-taglibs-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/springSecurity-3.0.3/spring-security-web-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/json/json_l.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/google/guava-11.0.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javamail-1.2/activation.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javamail-1.2/commons-email-1.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javamail-1.2/javamail.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_5.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.jstl_1.2">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web.jstl"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

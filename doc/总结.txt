@@ -1,0 +1,33 @@
+﻿持久层:@Repository
+业务层:@Service
+控制层: @Controller
+较中立的类:@Component
+
+注入方式：
+在接口前面标上@Autowired和@Qualifier注释使得接口可以被容器注入，当接口存在两个实现类的时候必须指定其中一个来注入，使用实现类首字母小写的字符串来注入，如：
+@Autowired
+@Qualifier("chinese")
+private Man man;
+否则可以省略，只写@Autowired?? 。 bean默认是单例的，如果想改变，可以使用@Service(“beanName”) @Scope(“prototype”)来改变。可以使用以下方式指定初始化方法和销毁方法（方法名任意）：@PostConstructpublic void init() { } @PreDestroypublic void dest\ory() { }
+
+
+
+
+
+
+
+
+1.springSecurity3 注意配置 配置了表达式就必须要用表达式
+2.springSecurity3 鉴权时直接终端过滤链跳转到配置的页面所以要在页面重新 redrict一次
+3.EL表达式不能直接获取请求路径中的值？还必须先放到 request.setAttri中才能获取？
+
+数据库拼接函数
+oracle:wm_concat  mysql:group_concat
+select group_concat(ur.function_list) from role ur
+
+
+
+
+
+Ext 
+Ext.getCmp(id).maximize() 窗口自动最大化

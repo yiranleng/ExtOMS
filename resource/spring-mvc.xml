@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		">
+
+	<!-- 配置拦截器 执行顺序 按list中的配置顺序 -->
+	<bean id="interceptor1"
+		class="com.superflying.cn.web.interceptor.StopWatchHandlerInterceptor" />
+<!--	<bean id="interceptor2" class="com.superflying.cn.web.interceptor.TestInterceptor" />-->
+
+
+	<!--Spring3.1开始的注解 HandlerMapping 处理器映射 -->
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+<!--		此处可配置拦截器 且 执行 优先级高于mvc:interceptors 的 如果两处都进行配置互补影响都会执行-->
+<!--		<property name="interceptors">	-->
+<!--			<list>-->
+<!--				<ref bean="interceptor1"></ref>-->
+<!--				<ref bean="interceptor2"></ref>-->
+<!--			</list>-->
+<!--		</property>-->
+	</bean>
+
+	<mvc:interceptors>
+		<!-- 多个拦截器,顺序执行 建议在此处增加拦截器 此处可配置拦截url -->
+		<mvc:interceptor>
+			<mvc:mapping path="/main/*" /><!-- 如果不配置或/*,将拦截所有的Controller -->
+			<ref bean="interceptor1"></ref>
+		</mvc:interceptor>
+<!--		<mvc:interceptor>-->
+<!--			<mvc:mapping path="/**" />-->
+<!--			<ref bean="interceptor2"></ref>-->
+<!--		</mvc:interceptor>-->
+	</mvc:interceptors>
+
+
+	<!--Spring3.1开始的注解 HandlerAdapter 处理器适配器-->
+	<bean id="test"
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<!--线程安全的访问session-->
+		<property name="synchronizeOnSession" value="true" />
+		<!--		<property name="customArgumentResolvers"> 开涛 自定义 json注解-->
+		<!--		</property>-->
+		<property name="messageConverters">
+            <list>
+            	<bean	class="org.springframework.http.converter.ByteArrayHttpMessageConverter"></bean>
+            	<bean	class="org.springframework.http.converter.StringHttpMessageConverter"></bean>
+            	<bean	class="org.springframework.http.converter.xml.SourceHttpMessageConverter"></bean>
+            	<bean	class="org.springframework.http.converter.xml.XmlAwareFormHttpMessageConverter"></bean>
+<!--				 @ResponseBody json解析器 如果不配置 则默认为如上四个-->
+            	<bean	class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
+            </list>
+        </property>
+	</bean>
+
+	<!--视图解析器的配置-->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- - The controllers are autodetected POJOs labeled with the @Controller annotation. -->
+	<!-- 开启controller注解支持 此处只应该加载表现层组件，如果此处还加载dao层或service层的bean会将之前容器加载的替换掉，而且此处不会进行AOP织入，所以会造成AOP失效问题（如事务不起作用），-->
+	<!-- 注：如果base-package=cn.javass 则注解事务不起作用-->
+	<context:component-scan
+		base-package="com.superflying.cn.web.action">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+
+	<mvc:resources mapping="/static/**" location="/static/" />
+	<!--	表示当访问主页时自动转发到index控制器。-->
+	<mvc:view-controller path="/" view-name="forward:/index" />
+	<mvc:default-servlet-handler />
+
+	<!--   上传文件	-->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10000000" />
+	</bean>
+	<!--wuxiaoxu 20130325 add	开启了之后它给AnnotationMethodHandlerAdapter初始化7个转换器，
+	可以通过调用AnnotationMethodHandlerAdapter类的getMessageConverts()方法来获取转换器的一个集合 -->
+	<mvc:annotation-driven />
+	
+</beans>

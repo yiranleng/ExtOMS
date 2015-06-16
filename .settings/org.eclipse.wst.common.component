@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ExtOMS">
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/web"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/service"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/driver"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/util"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/resource"/>
+        <property name="context-root" value="/"/>
+        <property name="java-output-path" value="/ExtOMS/WebRoot/WEB-INF/classes"/>
+        <property name="me-merge-utility-modules" value="true"/>
+    </wb-module>
+</project-modules>

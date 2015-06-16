@@ -1,0 +1,4809 @@
+/*
+ * Ext JS Library 2.2
+ * Copyright(c) 2006-2008, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://extjs.com/license
+ */ /*
+ * Ext JS Library 2.0
+ * Copyright(c) 2006-2007, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://www.extjs.com/license
+ */
+html,body {
+	/*	background: #3d71b8 url(../wallpapers/desktop.jpg) no-repeat left top;
+	font: normal 12px tahoma, arial, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden; 
+	height: 100%;*/
+	font: normal 12px tahoma, arial, verdana, sans-serif;
+	margin: 0; 
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: default;
+}
+
+.transparent {
+	-moz-opacity: 0.8;
+	opacity: .80;
+	filter: alpha(opacity =   80);
+}
+
+.wallpaper-tile {
+	background-repeat: repeat;
+	background-position: left top;
+}
+
+.wallpaper-center {
+	background-position: center;
+}
+
+.start {
+	background-image: url( ../images/taskbar/black/startbutton-icon.gif  )
+		!important;
+}
+
+.top {
+	background-image: url( ../images/top.jpg ) !important;
+}
+
+.bogus {
+	background-image: url( ../images/bogus.gif ) !important;
+}
+
+.logout {
+	background-image: url( ../images/logout.gif ) !important;
+}
+
+.settings {
+	background-image: url( ../images/gears.gif ) !important;
+}
+
+.add {
+	background-image: url(../icons/fam/add.gif) !important;
+}
+
+.option {
+	background-image: url(../icons/fam/plugin.gif) !important;
+}
+
+.remove {
+	background-image: url(../icons/fam/delete.gif) !important;
+}
+
+.save {
+	background-image: url(../icons/save.gif) !important;
+}
+
+/*jiang 20100330*/
+.alreadyExecute {
+	background-image: url(../icons/fam/alreadyExecute.gif) !important;
+}
+
+.awaitExecute {
+	background-image: url(../icons/fam/awaitExecute.png) !important;
+}
+
+/*
+	huangheng 20090826 add for catalogAuthorize
+*/
+.catalogAuthorize {
+	background-image: url(../icons/fam/catalogAuthorize.gif) !important;
+}
+
+/*
+	huangheng 20090915 add for search
+*/
+.keysearch {
+	background-image: url(../icons/fam/zoom.png) !important;
+}
+/*
+	liuqiang 20100629 add for metadataSearch
+*/
+.metadataSearch {
+	background-image: url(../icons/fam/metadataSearch.png) !important;
+}
+
+.searchOrder {
+	background-image: url(../icons/fam/plugin_add.gif) !important;
+}
+
+.addToCompile {
+	background-image: url(../icons/fam/rss_go.png) !important;
+}
+
+.ScanFile {
+	background-image: url(../icons/fam/wf_all.png) !important;
+}
+
+/*
+chenzhenhai 20100426   dispense button
+*/
+.dispense {
+	background-image: url(../icons/fam/dispense.png) !important;
+}
+
+/*
+chenzhenhai 20100426   dispense button
+*/
+.editDispenseData {
+	background-image: url(../icons/fam/editDispenseData.png) !important;
+}
+
+/*
+chenzhenhai 20100426   dispense button
+*/
+.receiveFile {
+	background-image: url(../icons/fam/receiveFile.png) !important;
+}
+
+/*
+chenzhenhai 20100426   dispense button
+*/
+.selectModel {
+	background-image: url(../icons/fam/selectModel.png) !important;
+}
+
+/*
+chenzhenhai 20100427   dispense button
+*/
+.lookDocumentFile {
+	background-image: url(../icons/fam/lookDocumentFile.png) !important;
+}
+/*
+chenzhenhai 20100528   log button
+*/
+.disableLog {
+	background-image: url(../icons/fam/disableLog.gif) !important;
+}
+/*
+shilongfei 20101201
+*/
+.SynonymGroup{
+	background-image: url( ../images/icon16/SynonymGroup.png) !important;
+}
+
+.ClassSearch {
+	background-image: url( ../images/icon16/ClassSearch.png) !important;
+}
+
+.FullSearch {
+	background-image: url( ../images/icon16/FullSearch.png) !important;
+}
+
+.ModelDefine {
+	background-image: url( ../images/icon16/ModelDefine.png) !important;
+}
+
+.TempFileUpload {
+	background-image: url( ../images/icon16/TempFileUpload.png) !important;
+}
+
+.TempFileManage {
+	background-image: url( ../images/icon16/TempFileManage.png) !important;
+}
+
+.FormatManage {
+	background-image: url( ../images/icon16/FormatManage.png) !important;
+}
+
+.MediaReplaceTasks {
+	background-image: url( ../images/icon16/MediaReplaceTasks.png)
+		!important;
+}
+
+.UsingFormMgr {
+	background-image: url( ../images/icon16/UsingFormMgr.png) !important;
+}
+
+.UsingManager {
+	background-image: url( ../images/icon16/UsingManager.png) !important;
+}
+
+.UsingModel {
+	background-image: url( ../images/icon16/UsingModel.png) !important;
+}
+
+.FullIndexManager {
+	background-image: url( ../images/icon16/FullIndexManager.png) !important
+		;
+}
+
+.RepositoryView {
+	background-image: url( ../images/icon16/RepositoryView.png) !important;
+}
+
+.EssAppConfigMenu {
+	background-image: url( ../images/icon16/EssAppConfigMenu.png) !important
+		;
+}
+
+.defineMyMenu {
+	background-image: url( ../images/icon16/defineMyMenu.png) !important;
+}
+
+.MyUsingForm {
+	background-image: url( ../images/icon16/MyUsingForm.png) !important;
+}
+
+.ViewResearchDoc {
+	background-image: url( ../images/icon16/ViewResearchDoc.png) !important;
+}
+
+.StructureModel {
+	background-image: url( ../images/icon16/StructureModel.png) !important;
+}
+
+.TagModel {
+	background-image: url( ../images/icon16/TagModel.png) !important;
+}
+
+.PublishManager {
+	background-image: url( ../images/icon16/PublishManager.png) !important;
+}
+
+.EssBusinessControl {
+	background-image: url( ../images/icon16/businessControl.png) !important;
+}
+
+.Publishmodel {
+	background-image: url( ../images/icon16/Publishmodel.png) !important;
+}
+
+.ArchiveMoving {
+	background-image: url( ../images/icon16/ArchiveMoving.png) !important;
+}
+
+.ArchiveMovingModel {
+	background-image: url( ../images/icon16/ArchiveMovingModel.png)
+		!important;
+}
+
+.emailManage {
+	background-image: url( ../images/icon16/emailManage.png)
+		!important;
+}
+
+.SystemLog {
+	background-image: url( ../images/icon16/SystemLog.png) !important;
+}
+
+.SystemLogModel {
+	background-image: url( ../images/icon16/SystemLogModel.png) !important;
+}
+
+.JobManagerWin {
+	background-image: url( ../images/icon16/JobManager.png) !important;
+}
+
+.Tree {
+	background-image: url( ../images/icon16/Tree.png) !important;
+}
+
+.MyTools {
+	background-image: url( ../images/icon16/MyTools.png) !important;
+}
+
+.UserMenu {
+	background-image: url( ../images/icon16/UserMenu.png) !important;
+}
+
+.Clickstream {
+	background-image: url( ../images/icon16/Clickstream.png) !important;
+}
+
+.IngestCentral {
+	background-image: url( ../images/icon16/IngestCentral.png) !important;
+}
+
+.AdminCentral {
+	background-image: url( ../images/icon16/AdminCentral.png) !important;
+}
+
+.AccessCentral {
+	background-image: url( ../images/icon16/AccessCentral.png) !important;
+}
+
+.InterfaceManager {
+	background-image: url( ../images/icon16/InterfaceManager.png) !important;
+}
+
+.ArchiveCollection {
+	background-image: url( ../images/icon16/ArchiveCollection.png)
+		!important;
+}
+
+.AICDefine {
+	background-image: url( ../images/icon16/AICDefine.png) !important;
+}
+
+.Collection {
+	background-image: url( ../images/icon16/Collection.png) !important;
+}
+
+.Submission {
+	background-image: url( ../images/icon16/Submission.png) !important;
+}
+
+.MetadataManage {
+	background-image: url( ../images/icon16/MetadataManage.png) !important;
+}
+
+.NameSpaceMenu {
+	background-image: url( ../images/icon16/NameSpaceMenu.png) !important;
+}
+
+.ArchiveManager {
+	background-image: url( ../images/icon16/ArchiveManager.png) !important;
+}
+
+.ArchiveIdx {
+	background-image: url( ../images/icon16/ArchiveIdx.png) !important;
+}
+
+.ArchiveStructure {
+	background-image: url( ../images/icon16/ArchiveStructure.png) !important
+		;
+}
+
+.BatchFtp {
+	background-image: url( ../images/icon16/BatchFtp.png) !important;
+}
+
+.ArchiveStat {
+	background-image: url( ../images/icon16/ArchiveStat.png) !important;
+}
+
+.ArchiveCompile {
+	background-image: url( ../images/icon16/ArchiveCompile.png) !important;
+}
+
+.CompileStructure {
+	background-image: url( ../images/icon16/CompileStructure.png) !important
+		;
+}
+
+.CompileEdit {
+	background-image: url( ../images/icon16/CompileEdit.png) !important;
+}
+
+.ArchiveRepository {
+	background-image: url( ../images/icon16/ArchiveRepository.png)
+		!important;
+}
+
+.RepositoryStructure {
+	background-image: url( ../images/icon16/RepositoryStructure.png)
+		!important;
+}
+
+.RepositoryEntity {
+	background-image: url( ../images/icon16/RepositoryEntity.png) !important
+		;
+}
+
+.ArchivalStorage {
+	background-image: url( ../images/icon16/ArchivalStorage.png) !important;
+}
+
+.StorageCheck {
+	background-image: url( ../images/icon16/StorageCheck.png) !important;
+}
+
+.WorkflowManager {
+	background-image: url( ../images/icon16/WorkflowManager.png) !important;
+}
+
+.WfModelManager {
+	background-image: url( ../images/icon16/WfModelManager.png) !important;
+}
+
+.WfStepManager {
+	background-image: url( ../images/icon16/WfStepManager.png) !important;
+}
+
+.SystemManage {
+	background-image: url( ../images/icon16/SystemManage.png) !important;
+}
+
+.EssorganMenu {
+	background-image: url( ../images/icon16/EssorganMenu.png) !important;
+}
+
+.SysAuthorizeManage {
+	background-image: url( ../images/icon16/SysAuthorizeManage.png)
+		!important;
+}
+
+.RoleMenu {
+	background-image: url( ../images/icon16/RoleMenu.png) !important;
+}
+
+.UserManage {
+	background-image: url( ../images/icon16/UserManage.png) !important;
+}
+
+.MenuAuthorize {
+	background-image: url( ../images/icon16/MenuAuthorize.png) !important;
+}
+
+.DataAuthorize {
+	background-image: url( ../images/icon16/DataAuthorize.png) !important;
+}
+
+.EsskeywordMenu {
+	background-image: url( ../images/icon16/EsskeywordMenu.png) !important;
+}
+
+.Essclass {
+	background-image: url( ../images/icon16/Essclass.png) !important;
+}
+
+.EssftpsrvMenu {
+	background-image: url( ../images/icon16/EssftpsrvMenu.png) !important;
+}
+
+/*
+huangheng 20090825
+*/
+.ClassBatchOperation {
+	background-image: url( ../images/icon16/ClassBatchOperation.png)
+		!important;
+}
+
+/*
+houyu 20090921
+*/
+.EntryListExport {
+	background-image: url( ../images/icon16/EntryListExport.png) !important;
+}
+
+/*
+houyu 20090921
+*/
+.ArchiveDataManager {
+	background-image: url( ../images/icon16/ArchiveDataManager.png)
+		!important;
+}
+
+/*
+houyu 20090921
+*/
+.YearNewspaperManager {
+	background-image: url( ../images/icon16/YearNewspaperManager.png)
+		!important;
+}
+
+/*
+houyu 20090921
+*/
+.YearNewspaperStructure {
+	background-image: url( ../images/icon16/YearNewspaperStructure.png)
+		!important;
+}
+
+/*
+houyu 20091119
+*/
+.CustodyManager {
+	background-image: url( ../images/icon16/CustodyManager.png) !important;
+}
+
+/*
+houyu 20091119
+*/
+.CustodyStructure {
+	background-image: url( ../images/icon16/CustodyStructure.png) !important
+		;
+}
+
+/*
+houyu 20091125
+*/
+.maintain {
+	background-image: url( ../images/icon16/Maintain.png) !important;
+}
+
+/*
+houyu 20091125 
+*/
+.newStructureModel {
+	background-image: url( ../images/icon16/NewStructureModel.png)
+		!important;
+}
+
+/*
+houyu 20091125 
+*/
+.replaceStructureModel {
+	background-image: url( ../images/icon16/ReplaceStructureModel.png)
+		!important;
+}
+
+/*
+houyu 20091125 全锟斤拷锟斤拷钮
+*/
+.all {
+	background-image: url( ../images/icon16/All.png) !important;
+}
+
+/*
+lizhiqing 20091011 
+*/
+.InfoSubscribe {
+	background-image: url( ../images/icon16/InfoSubscribe.png) !important;
+}
+
+.InfoSubscribeMessage {
+	background-image: url( ../images/icon16/InfoSubscribeMessage.png)
+		!important;
+}
+
+/*
+liukaiyuan 20091130
+*/
+.Recycle {
+	background-image: url( ../images/icon16/Recycle.png) !important;
+}
+
+.Filing {
+	background-image: url( ../images/icon16/Filing.png) !important;
+}
+
+/*
+chenzhenhai 20100426
+*/
+.FileDispenseData {
+	background-image: url( ../images/icon16/FileDispenseData.png) !important
+		;
+}
+
+/*
+chenzhenhai 20100426
+*/
+.FileDispensePlan {
+	background-image: url( ../images/icon16/FileDispensePlan.png) !important
+		;
+}
+
+/*
+chenzhenhai 20100426
+*/
+.FileDispenseMatrix {
+	background-image: url( ../images/icon16/FileDispenseMatrix.png)
+		!important;
+}
+/*
+ yuzhijia 20110214
+*/
+.SystemInitExport {
+	background-image: url( ../images/icon16/SystemInitExport.png)
+		!important;
+}
+/*
+ yuzhijia 20110311
+*/
+.SystemInitImport {
+	background-image: url( ../images/icon16/SystemInitImport.png)
+		!important;
+}
+
+.floatLeft {
+	float: left;
+	padding: 0 0 0 25px;
+}
+
+/*
+zhangwenbin 20100113 
+*/
+.floatLeftR {
+	float: left;
+	margin-left: -25px;
+	padding: 0 0 0 25px;
+}
+
+.floatLeftRL {
+	float: left;
+	margin-left: 19px;
+	margin-top: -20px;
+	padding: 0 0 0 25px;
+}
+
+.reportButton {
+	margin-top: -20px;
+}
+
+/*
+zhangwenbin end 20100113
+*/
+.allowFloat {
+	clear: none !important;
+}
+
+.stopFloat {
+	clear: both !important;
+}
+
+/*
+added by haojianke on 20100323 
+*/
+.EssExtraKeywordMenu {
+	background-image: url( ../images/icon16/ExtraKeyword.png) !important;
+}
+
+/*
+added by haojianke on 20100323 
+*/
+.MakeDisc {
+	background-image: url( ../images/icon16/CDMaker.png) !important;
+}
+
+#dpanels {
+	width: 250px;
+	float: right;
+}
+
+#dpanels .x-panel {
+	margin: 15px;
+}
+
+.ux-mselect {
+	overflow: auto;
+	background: white;
+	position: relative; /* for calculating scroll offsets */
+	zoom: 1;
+	overflow: auto;
+}
+
+.ux-mselect-item {
+	font: normal 12px tahoma, arial, helvetica, sans-serif;
+	padding: 2px;
+	border: 1px solid #fff;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.ux-mselect-selected {
+	border: 1px dotted #a3bae9 !important;
+	background: #DFE8F6;
+	cursor: pointer;
+}
+
+.x-view-drag-insert-above {
+	border-top: 1px dotted #3366cc;
+}
+
+.x-view-drag-insert-below {
+	border-bottom: 1px dotted #3366cc;
+}
+
+#dpanels .x-date-picker {
+	border: 0 none;
+	border-top: 0 none;
+	background: transparent;
+}
+
+#dpanels .x-date-picker td.x-date-active {
+	background: #ffffff;
+}
+
+#dpanels .x-date-picker {
+	width: 100% !important;
+}
+
+#x-desktop {
+	width: 100%;
+	height: 100%;
+	border: 0 none;
+	position: relative;
+	overflow: hidden;
+	zoom: 1;
+}
+
+#x-portal {
+	width: 70%;
+	height: 100%;
+	border: 0 none;
+	position: relative;
+	overflow: hidden;
+	zoom: 1;
+}
+
+#ux-taskbar .x-btn {
+	float: left;
+	margin: 1px 0 0 1px;
+	position: relative;
+}
+
+#ux-taskbar-start .x-btn {
+	float: left;
+	margin: 0;
+	position: relative;
+}
+
+#ux-taskbar button { /* width: 150px;
+	overflow: hidden; */
+	text-align: left;
+	color: #ffffff;
+}
+
+#title-bar-wrapper {
+	height: 35px;
+}
+
+#title-bar {
+	color: #225599;
+	padding: 9px 7px;
+	font: bold 16px tahoma, arial, verdana, sans-serif;
+	float: left;
+}
+
+#x-logout {
+	float: right;
+	padding: 6px 7px;
+}
+
+.x-btn-text-icon .x-btn-center .logout {
+	background-position: 0pt 3px;
+	background-repeat: no-repeat;
+	padding: 3px 0pt 3px 18px;
+}
+
+#ux-taskbar {
+	background: transparent none;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 12001;
+}
+
+.x-btn-icon .ux-taskbutton-center .x-btn-text {
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 16px;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 0;
+}
+
+.x-btn-icon .ux-taskbutton-center {
+	padding: 1px;
+}
+
+.x-btn-text-icon .ux-taskbutton-center .x-btn-text {
+	background-position: 0 6px;
+	background-repeat: no-repeat;
+	padding: 7px 0px 7px 20px;
+}
+
+.x-btn-text-icon .ux-startbutton-center .x-btn-text {
+	background-position: 0 4px;
+	background-repeat: no-repeat;
+	color: #000000 !important;
+	font-weight: bold;
+	padding: 7px 0px 7px 28px;
+}
+
+.ux-taskbutton-left,.ux-taskbutton-right {
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.ux-taskbutton-left {
+	width: 4px;
+	height: 28px;
+	background: url( ../images/taskbar/black/taskbutton.gif ) no-repeat 0 0;
+}
+
+.ux-taskbutton-right {
+	width: 4px;
+	height: 28px;
+	background: url( ../images/taskbar/black/taskbutton.gif ) no-repeat 0
+		-28px;
+}
+
+.ux-taskbutton-left i,.ux-taskbutton-right i {
+	display: block;
+	width: 4px;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.ux-taskbutton-center {
+	background: url( ../images/taskbar/black/taskbutton.gif ) repeat-x 0
+		-56px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0 5px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+#ux-taskbar .ux-taskbutton-left {
+	background-position: 0 0;
+}
+
+#ux-taskbar .ux-taskbutton-right {
+	background-position: 0 -28px;
+}
+
+#ux-taskbar .ux-taskbutton-center {
+	background-position: 0 -56px;
+}
+
+#ux-taskbar .x-btn-over .ux-taskbutton-left {
+	background-position: 0 -252px;
+}
+
+#ux-taskbar .x-btn-over  .ux-taskbutton-right {
+	background-position: 0 -280px;
+}
+
+#ux-taskbar .x-btn-over .ux-taskbutton-center {
+	background-position: 0 -308px;
+}
+
+#ux-taskbar .x-btn-click .ux-taskbutton-left {
+	background-position: 0 -168px;
+}
+
+#ux-taskbar .x-btn-click  .ux-taskbutton-right {
+	background-position: 0 -196px;
+}
+
+#ux-taskbar .x-btn-click .ux-taskbutton-center {
+	background-position: 0 -224px;
+}
+
+#ux-taskbar .active-win .ux-taskbutton-left {
+	background-position: 0 -84px;
+}
+
+#ux-taskbar .active-win  .ux-taskbutton-right {
+	background: url( ../images/taskbar/black/taskbutton.gif ) no-repeat 0
+		-112px;
+}
+
+#ux-taskbar .active-win .ux-taskbutton-center {
+	background: url( ../images/taskbar/black/taskbutton.gif ) repeat-x 0
+		-140px;
+}
+
+#ux-taskbar .active-win .ux-taskbutton-center button {
+	color: #fff;
+}
+
+#spacer {
+	height: 25px;
+	float: left;
+	width: 0;
+	overflow: hidden;
+	margin-top: 2px;
+}
+
+.x-window-body p,.x-panel-body p {
+	padding: 10px;
+	margin: 0;
+}
+
+.x-window-maximized .x-window-bc {
+	height: 0;
+}
+
+.icon-grid {
+	background-image: url( ../images/grid.png ) !important;
+}
+
+.accordion {
+	background-image: url(../images/accordian.gif) !important;
+}
+
+.tabs {
+	background-image: url(../images/tabs.gif) !important;
+}
+
+/* IM window icons */
+.user {
+	background-image: url(../images/fam/user.gif ) !important;
+}
+
+.user-add {
+	background-image: url(../images/fam/user_add.gif) !important;
+}
+
+.user-delete {
+	background-image: url(../images/fam/user_delete.gif) !important;
+}
+
+.connect {
+	background-image: url(../images/fam/connect.gif) !important;
+}
+
+.user-girl {
+	background-image: url(../images/fam/user_female.gif) !important;
+}
+
+.user-kid {
+	background-image: url(../images/fam/user_green.gif) !important;
+}
+
+.user-suit {
+	background-image: url(../images/fam/user_suit.gif) !important;
+}
+
+.ux-start-menu {
+	background: transparent none;
+	border: 0px none;
+	padding: 0;
+}
+
+.ux-start-menu-tl .x-window-header {
+	color: #f1f1f1;
+	font: bold 11px tahoma, arial, verdana, sans-serif;
+	padding: 5px 0 4px 0;
+}
+
+.x-panel-tl .x-panel-icon,.ux-start-menu-tl .x-panel-icon {
+	background-position: 0pt 4px;
+	background-repeat: no-repeat;
+	padding-left: 20px !important;
+}
+
+.ux-start-menu-tl {
+	background: transparent
+		url( ../images/taskbar/black/start-menu-left-corners.png ) no-repeat 0
+		0;
+	padding-left: 6px;
+	zoom: 1;
+	z-index: 1;
+	position: relative;
+}
+
+.ux-start-menu-tr {
+	background: transparent
+		url( ../images/taskbar/black/start-menu-right-corners.png ) no-repeat
+		right 0;
+	padding-right: 6px;
+}
+
+.ux-start-menu-tc {
+	background: transparent
+		url( ../images/taskbar/black/start-menu-top-bottom.png ) repeat-x 0 0;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.ux-start-menu-ml {
+	background: transparent
+		url( ../images/taskbar/black/start-menu-left-right.png ) repeat-y 0 0;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.ux-start-menu-bc {
+	background: transparent
+		url( ../images/taskbar/black/start-menu-top-bottom.png ) repeat-x 0
+		bottom;
+	zoom: 1;
+}
+
+.ux-start-menu-bc .x-window-footer {
+	padding-bottom: 6px;
+	zoom: 1;
+	font-size: 0;
+	line-height: 0;
+}
+
+.ux-start-menu-bl {
+	background: transparent
+		url( ../images/taskbar/black/start-menu-left-corners.png ) no-repeat 0
+		bottom;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.ux-start-menu-br {
+	background: transparent
+		url( ../images/taskbar/black/start-menu-right-corners.png ) no-repeat
+		right bottom;
+	padding-right: 6px;
+	zoom: 1;
+}
+
+.x-panel-nofooter .ux-start-menu-bc {
+	height: 6px;
+}
+
+.ux-start-menu-splitbar-h {
+	background-color: #d0d0d0;
+}
+
+.ux-start-menu-bwrap {
+	background: transparent none;
+	border: 0px none;
+}
+
+.ux-start-menu-body {
+	background: transparent none;
+	border: 0px none;
+}
+
+.ux-start-menu-apps-panel {
+	background: #ffffff none;
+	border: 1px solid #1e2124;
+}
+
+.ux-start-menu-tools-panel {
+	border: 0px none;
+	background: transparent
+		url( ../images/taskbar/black/start-menu-right.png ) repeat-y scroll
+		right 0pt;
+}
+
+#ux-taskbar-start {
+	background: #000000
+		url( ../images/taskbar/black/taskbar-start-panel-bg.gif ) repeat-x
+		left top;
+	left: 0px;
+	padding: 0;
+	position: absolute;
+}
+
+#ux-taskbar-start .x-toolbar {
+	background: none;
+	padding: 0px;
+	border: 0px none;
+}
+
+#ux-taskbar-panel-wrap {
+	background: transparent none;
+}
+
+#ux-taskbuttons-panel {
+	background: #000000
+		url( ../images/taskbar/black/taskbuttons-panel-bg.gif ) repeat-x left
+		top;
+	padding-top: 0;
+	position: relative;
+}
+
+.ux-taskbuttons-strip-wrap { /* overflow:hidden;
+	position:relative;
+	width:100%; */
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	zoom: 1;
+}
+
+ul.ux-taskbuttons-strip {
+	display: block;
+	width: 5000px;
+	zoom: 1;
+}
+
+ul.ux-taskbuttons-strip li {
+	float: left;
+	margin-left: 2px;
+}
+
+ul.ux-taskbuttons-strip li.ux-taskbuttons-edge {
+	float: left;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 none !important;
+	font-size: 1px !important;
+	line-height: 1px !important;
+	overflow: hidden;
+	zoom: 1;
+	background: transparent !important;
+	width: 1px;
+}
+
+.x-clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	line-height: 0;
+	font-size: 0;
+}
+
+.x-taskbuttons-scrolling {
+	position: relative;
+}
+
+.x-taskbuttons-scrolling .ux-taskbuttons-strip-wrap {
+	margin-left: 18px;
+	margin-right: 18px;
+}
+
+td.ux-taskButtons-edge { /*float:left;*/
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 none !important;
+	font-size: 1px !important;
+	line-height: 1px !important;
+	overflow: hidden;
+	zoom: 1;
+	background: transparent !important;
+	width: 1px;
+}
+
+.ux-taskbuttons-scroller-left {
+	background: transparent url( ../images/taskbar/black/scroll-left.gif )
+		no-repeat -18px 0;
+	width: 18px;
+	position: absolute;
+	left: 1px;
+	top: 0px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.ux-taskbuttons-scroller-left-over {
+	background-position: 0 0;
+}
+
+.ux-taskbuttons-scroller-left-disabled {
+	background-position: -18px 0;
+	opacity: .5;
+	-moz-opacity: .5;
+	filter: alpha(opacity =         50);
+	cursor: default;
+}
+
+.ux-taskbuttons-scroller-right {
+	background: transparent url( ../images/taskbar/black/scroll-right.gif )
+		no-repeat 0 0;
+	width: 18px;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.ux-taskbuttons-scroller-right-over {
+	background-position: -18px 0;
+}
+
+.ux-taskbuttons-scroller-right-disabled {
+	background-position: 0 0;
+	opacity: .5;
+	-moz-opacity: .5;
+	filter: alpha(opacity =         50);
+	cursor: default;
+}
+
+.ux-toolmenu-sep {
+	background-color: #18191a;
+	border-bottom: 1px solid #858789;
+	display: block;
+	font-size: 1px;
+	line-height: 1px;
+	margin: 2px 3px;
+}
+
+.ux-start-menu-tools-panel ul.x-menu-list li.x-menu-list-item a.x-menu-item
+	{
+	color: #ffffff;
+}
+
+.ux-start-menu-tools-panel ul.x-menu-list li.x-menu-list-item .x-menu-item-active a.x-menu-item
+	{
+	color: #000000;
+}
+
+.ux-start-menu-tools-panel .x-menu-item-active {
+	background: #525456 url( ../images/taskbar/black/item-over.gif )
+		repeat-x left bottom;
+	border: 1px solid #000000;
+	padding: 0;
+}
+
+#ux-taskbar .x-splitbar-h {
+	background: #000000 url( ../images/taskbar/black/taskbar-split-h.gif )
+		no-repeat 0 0;
+	width: 8px;
+}
+
+.x-window-header-text {
+	cursor: default;
+}
+
+/*
+ * Begin Start button
+ */
+.ux-startbutton-left,.ux-startbutton-right {
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.ux-startbutton-left {
+	width: 10px;
+	height: 28px;
+	background: url( ../images/taskbar/black/startbutton.gif ) no-repeat 0 0
+		;
+}
+
+.ux-startbutton-right {
+	width: 10px;
+	height: 30px;
+	background: url( ../images/taskbar/black/startbutton.gif ) no-repeat 0
+		-28px;
+}
+
+.ux-startbutton-left i,.ux-startbutton-right i {
+	display: block;
+	width: 10px;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.ux-startbutton-center {
+	background: url( ../images/taskbar/black/startbutton.gif ) repeat-x 0
+		-56px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.x-grid3-header-offset {
+	width: auto;
+}
+
+.ux-grid-hd-group-cell {
+	background: url(../../resources/images/default/grid/grid3-hrow.gif)
+		repeat-x bottom;
+}
+
+#ux-taskbar .ux-startbutton-left {
+	background-position: 0 0;
+}
+
+#ux-taskbar .ux-startbutton-right {
+	background-position: 0 -30px;
+}
+
+#ux-taskbar .ux-startbutton-center {
+	background-position: 0 -60px;
+}
+
+#ux-taskbar .x-btn-over .ux-startbutton-left {
+	background-position: 0 -270px;
+}
+
+#ux-taskbar .x-btn-over  .ux-startbutton-right {
+	background-position: 0 -300px;
+}
+
+#ux-taskbar .x-btn-over .ux-startbutton-center {
+	background-position: 0 -330px;
+}
+
+#ux-taskbar .x-btn-click .ux-startbutton-left {
+	background-position: 0 -180px;
+}
+
+#ux-taskbar .x-btn-click  .ux-startbutton-right {
+	background-position: 0 -210px;
+}
+
+#ux-taskbar .x-btn-click .ux-startbutton-center {
+	background-position: 0 -240px;
+}
+
+#ux-taskbar .active-win .ux-startbutton-left {
+	background-position: 0 -90px;
+}
+
+#ux-taskbar .active-win  .ux-startbutton-right {
+	background: url( ../images/taskbar/black/startbutton.gif ) no-repeat 0
+		-120px;
+}
+
+#ux-taskbar .active-win .ux-startbutton-center {
+	background: url( ../images/taskbar/black/startbutton.gif ) repeat-x 0
+		-150px;
+}
+
+#ux-taskbar .active-win .ux-startbutton-center button {
+	color: #fff;
+}
+
+/*
+ * End Start button
+ */
+.x-resizable-proxy {
+	background: #C7DFFC;
+	opacity: .5;
+	-moz-opacity: .5;
+	filter: alpha(opacity =         50);
+	border: 1px solid #3b5a82;
+}
+
+.x-portal .x-panel-dd-spacer {
+	margin-bottom: 10px;
+}
+
+.x-portlet {
+	margin-bottom: 10px;
+}
+
+/* Clean up the look of the portlets */
+.x-portlet .x-panel-ml {
+	padding-left: 2px;
+}
+
+.x-portlet .x-panel-mr {
+	padding-right: 2px;
+}
+
+.x-portlet .x-panel-bl {
+	padding-left: 2px;
+}
+
+.x-portlet .x-panel-br {
+	padding-right: 2px;
+}
+
+.x-portlet .x-panel-body {
+	background: white;
+}
+
+.x-portlet .x-panel-mc {
+	padding-top: 2px;
+}
+
+.x-portlet .x-panel-bc .x-panel-footer {
+	padding-bottom: 2px;
+}
+
+.x-portlet .x-panel-nofooter .x-panel-bc {
+	height: 2px;
+}
+
+/* Begin: shortcuts */
+.ux-shortcut-item {
+	font: normal 10px tahoma, arial, verdana, sans-serif;
+	height: 76px;
+	overflow: hidden;
+	position: absolute;
+	text-align: center;
+	width: 64px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.ux-shortcut-btn {
+	cursor: pointer;
+	width: 64px;
+	display:table-cell;
+	vertical-align:middle;
+	text-align: center;
+}
+
+.ux-shortcut-btn-text {
+	overflow: hidden;
+	font: 11px;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.ext-ie .ux-shortcut-btn img {
+	background: transparent !important;
+}
+
+.ux-shortcut-btn img {
+	width: 48px !important;
+	height: 48px !important;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:right;
+	margin-left: 3px;
+}
+
+/* End: shortcuts */
+#x-portal dt {
+	float: rigth;
+	margin: 30px 15px 0 15px;
+	clear: rigth;
+	width: 700px;
+	filter: alpha(opacity =         50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	zoom: 1;
+	display: block;
+}
+
+/* shortcuts */
+.ClassSearch-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ClassSearch.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/ClassSearch.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.FullSearch-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/FullSearch.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/FullSearch.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ModelDefine-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ModelDefine.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/ModelDefine.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.TempFileUpload-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/TempFileUpload.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/TempFileUpload.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.TempFileManage-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/TempFileManage.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/TempFileManage.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.FormatManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/FormatManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FormatManage.png");/**zhengfang 20100928 change gif to png*/
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+		 
+}
+
+.MediaReplaceTasks-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/MediaReplaceTasks.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MediaReplaceTasks.png");/**zhengfang 20100928 change gif to png*/
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.UsingFormMgr-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/UsingFormMgr.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/UsingFormMgr.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.UsingManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/UsingManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/UsingManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.UsingModel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/UsingModel.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/UsingModel.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.FullIndexManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/FullIndexManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FullIndexManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.RepositoryView-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/RepositoryView.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/RepositoryView.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.EssAppConfigMenu-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/EssAppConfigMenu.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/EssAppConfigMenu.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.defineMyMenu-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/defineMyMenu.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/defineMyMenu.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.MyUsingForm-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/MyUsingForm.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MyUsingForm.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ViewResearchDoc-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/ViewResearchDoc.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ViewResearchDoc.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.StructureModel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/StructureModel.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/StructureModel.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.TagModel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/TagModel.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/TagModel.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.PublishManager-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/PublishManager.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/PublishManager.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.EssBusinessControl-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/businessControl.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/businessControl.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.Publishmodel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/Publishmodel.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/Publishmodel.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveMoving-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/ArchiveMoving.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveMoving.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveMovingModel-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ArchiveMovingModel.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveMovingModel.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.emailManage-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/emailManage.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/emailManage.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.SystemLog-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/SystemLog.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/SystemLog.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.SystemLogModel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/SystemLogModel.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/SystemLogModel.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.JobManagerWin-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/JobManager.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/JobManager.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.Tree-shortcut{
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/Tree.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/Tree.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+
+.MyTools-shortcut{
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/MyTools.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/MyTools.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.UserMenu-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/im48x48.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/im48x48.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+
+
+.Clickstream-shortcut{
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/Clickstream.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/Clickstream.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.IngestCentral-shortcut{
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/IngestCentral.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/IngestCentral.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.AdminCentral-shortcut{
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/AdminCentral.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/AdminCentral.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.AccessCentral-shortcut{
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/AccessCentral.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/AccessCentral.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.InterfaceManager-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/InterfaceManager.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/InterfaceManager.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveCollection-shortcut {
+	clear:both;
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchiveCollection.png)  top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src = '/scripts/ext/desktop/images/icon48/ArchiveCollection.png',
+		sizingMethod ='scale');
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.AICDefine-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/AICDefine.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/AICDefine.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.Collection-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/Collection.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/Collection.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.Submission-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/Submission.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/Submission.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.MetadataManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/MetadataManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MetadataManage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.NameSpaceMenu-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/NameSpaceMenu.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/NameSpaceMenu.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchiveManager.png)  top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveIdx-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width:48px;
+	height:48px;
+	background: url(../images/icon48/ArchiveIdx.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveIdx.png");
+	_background:none;/**zhengfang 20100928 add*/	
+	margin-left: 8px;margin-left: 0px\9;
+}
+.ArchiveStructure-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchiveStructure.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveStructure.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.BatchFtp-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/BatchFtp.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/BatchFtp.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveStat-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ArchiveStat.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveStat.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.ArchiveCompile-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchiveCompile.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveCompile.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.ArchiveCompile-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchiveCompile.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveCompile.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.CompileStructure-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/CompileStructure.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/CompileStructure.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.CompileEdit-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/CompileEdit.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/CompileEdit.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveRepository-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ArchiveRepository.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/ArchiveRepository.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.RepositoryStructure-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/RepositoryStructure.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/RepositoryStructure.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+
+.RepositoryEntity-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;  
+	background: url(../images/icon48/RepositoryEntity.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/RepositoryEntity.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchivalStorage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchivalStorage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchivalStorage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.StorageCheck-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/StorageCheck.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/StorageCheck.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.WorkflowManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background-image: url(../images/icon48/WorkflowManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/WorkflowManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.WfModelManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/WfModelManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src =  '/scripts/ext/desktop/images/icon48/WfModelManager.png', 
+		sizingMethod = 'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.WfStepManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;  
+	background: url(../images/icon48/WfStepManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/WfStepManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.SystemManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;  
+	background: url(../images/icon48/SystemManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/SystemManage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.EssorganMenu-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/EssorganMenu.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/EssorganMenu.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.SystemManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;  
+	background: url(../images/icon48/SysAuthorizeManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/SysAuthorizeManage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.RoleMenu-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/RoleMenu.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src = '/scripts/ext/desktop/images/icon48/RoleMenu.png', sizingMethod =  
+		'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.UserManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/UserManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src = '/scripts/ext/desktop/images/icon48/UserManage.png', sizingMethod =  
+		'scale');
+	_background:none;	 
+	margin-left: 8px;margin-left: 0px\9;
+	
+}
+
+.MenuAuthorize-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/MenuAuthorize.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MenuAuthorize.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.DataAuthorize-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/DataAuthorize.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DataAuthorize.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.EsskeywordMenu-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/EsskeywordMenu.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/EsskeywordMenu.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.Essclass-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/Essclass.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/Essclass.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.EssftpsrvMenu-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/EssftpsrvMenu.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/EssftpsrvMenu.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.ClassBatchOperation-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ClassBatchOperation.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src = '/scripts/ext/desktop/images/icon48/ClassBatchOperation.png', sizingMethod =  
+		'scale');
+	_background:none;	 
+	margin-left: 8px;margin-left: 0px\9;
+	
+}
+
+
+.EntryListExport-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/EntryListExport.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src = '/scripts/ext/desktop/images/icon48/EntryListExport.png', sizingMethod =  
+		'scale');
+	_background:none;	 
+	margin-left: 8px;margin-left: 0px\9;
+	
+}
+/*
+houyu 20090921
+*/
+.ArchiveDataManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/ArchiveDataManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveDataManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+houyu 20090921
+*/
+.YearNewspaperManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/YearNewspaperManager.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/YearNewspaperManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+houyu 20090921
+*/
+.YearNewspaperStructure-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/YearNewspaperStructure.png)  top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/YearNewspaperStructure.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.CustodyStructure-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/CustodyStructure.png)  top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/CustodyStructure.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+houyu 20090921
+*/
+.CustodyManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/CustodyManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/CustodyManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+lizhiqing 20091011
+*/
+.InfoSubscribe-shortcut {
+	 clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/InfoSubscribe.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/InfoSubscribe.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.InfoSubscribeMessage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/InfoSubscribeMessage.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/InfoSubscribeMessage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+liukaiyuan 20091130
+
+*/
+.Recycle-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/Recycle.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/Recycle.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.Filing-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/Filing.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/Filing.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+added by haojianke on 20100323 
+*/
+.MakeDisc-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/CDMaker.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/CDMaker.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+added by haojianke on 20100323 
+*/
+.EssExtraKeywordMenu-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ExtraKeyword.png);
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ExtraKeyword.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+chenzhenhai 20100426 FileDispense shortcut
+*/
+.FileDispenseData-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/FileDispenseData.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FileDispenseData.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+chenzhenhai 20100426 FileDispense shortcut
+*/
+.FileDispensePlan-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/FileDispensePlan.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FileDispensePlan.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+chenzhenhai 20100426 FileDispense shortcut
+*/
+.FileDispenseMatrix-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/FileDispenseMatrix.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FileDispenseMatrix.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+huangheng 20090417
+*/
+#images-view .x-panel-body {
+	background: white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#images-view .thumb {
+	padding: 3px;
+}
+
+#images-view .thuimg {
+	height: 60px;
+	width: 80px;
+}
+/*
+* 20110122 jiang modify
+*/
+.thumb-wrap {
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+	width:95px;
+	height:109px;
+    text-align: center;
+}
+
+#images-view .thumb-wrap span {
+	width:95px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+/*
+*huangheng 20090927 edit for searchResult item onmouseover
+*/
+.x-view-over {
+	background: #efefef;
+}
+
+#images-view .x-view-selected {
+	background: #eff5fb url(images/selected.gif) no-repeat right bottom;
+	border: 1px solid #99bbe8;
+	padding: 4px;
+}
+
+#images-view .x-view-selected .thumb {
+	background: transparent;
+}
+
+#images-view .loading-indicator {
+	font-size: 11px;
+	background-image: url('../../resources/images/default/grid/loading.gif')
+		;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+	margin: 10px;
+}
+
+#search-results a {
+	color: #385F95;
+	font: bold 11px tahoma, arial, helvetica, sans-serif;
+	text-decoration: none;
+}
+
+#search-results a:hover {
+	text-decoration: underline;
+}
+
+#search-results .search-item {
+	padding: 5px;
+}
+
+/*
+*huangheng 20091007 add 
+*/
+.search-item-dual {
+	background: #efefef;
+}
+
+.search-item-single {
+	background: #efffff;
+}
+
+#search-results p {
+	margin: 3px !important;
+}
+
+#search-results {
+	border-bottom: 1px solid #ddd;
+	margin: 0 1px;
+	height: 300px;
+	overflow: auto;
+}
+
+#search-results .x-toolbar {
+	border: 0 none;
+}
+
+.msg .x-box-mc {
+	font-size: 14px;
+}
+
+#msg-div {
+	position: absolute;
+	top: 10px;
+	width: 250px;
+	z-index: 20000;
+}
+
+/**jiang add 20090826**/
+.pkgSearch {
+	background-image: url(../icons/fam/pkg_search.png) !important;
+}
+
+.book {
+	background-image: url(../icons/fam/book.png) !important;
+}
+
+.book_link {
+	background-image: url(../icons/fam/book_link.png) !important;
+}
+
+.tick {
+	background-image: url(../icons/fam/tick.png) !important;
+}
+
+.toLeft {
+	background-image: url(../icons/fam/toLeft.png) !important;
+}
+
+.toRight {
+	background-image: url(../icons/fam/toRight.png) !important;
+}
+
+.cancel {
+	background-image: url(../icons/fam/cancel.png) !important;
+}
+
+.GridPrint {
+	background-image: url("../icons/fam/Gird_Print.png") !important;
+}
+
+.GridAdd {
+	background-image: url("../icons/fam/Grid_Add.png") !important;
+}
+
+.GridDelete {
+	background-image: url("../icons/fam/Grid_Delete.png") !important;
+}
+
+.GridSave {
+	background-image: url("../icons/fam/Grid_Save.png") !important;
+}
+
+.GridSearch {
+	background-image: url("../icons/fam/Grid_Search.png") !important;
+}
+
+.GridBack {
+	background-image: url("../icons/fam/Grid_Back_Up.gif") !important;
+}
+
+.GridUpFile {
+	background-image: url("../icons/fam/Grid_Up_File.png") !important;
+}
+
+.GridMenuGroup {
+	background-image: url("../icons/fam/Grid_Menu_Group_by.gif") !important;
+}
+
+.GridDataExort {
+	background-image: url("../icons/fam/Grid_Data_Export.gif") !important;
+}
+
+.GridCombinField {
+	background-image: url("../icons/fam/Grid_CombinField.png") !important;
+}
+
+.GridBatchImport {
+	background-image: url("../icons/fam/Grid_Data_Import.gif") !important;
+}
+
+.GridBatchDelete {
+	background-image: url("../icons/fam/Grid_Data_Batch_Delete.gif")
+		!important;
+}
+
+.GridBatchEdit {
+	background-image: url("../icons/fam/Grid_Data_Batch_Edit.gif")
+		!important;
+}
+
+.GridBatchBitstream {
+	background-image: url("../icons/fam/exchange.png")
+		!important;
+}
+
+.GridZipImport {
+	background-image: url("../icons/fam/Grid_Zip_Import.gif") !important;
+}
+
+.shapeSquare {
+	background-image: url("../icons/fam/shape_square.png") !important;
+}
+
+.link {
+	background-image: url("../icons/fam/link.png") !important;
+}
+
+.chartAdd {
+	background-image: url("../icons/fam/chart_organisation_add.png")
+		!important;
+}
+
+.chartDelete {
+	background-image: url("../icons/fam/chart_organisation_delete.png")
+		!important;
+}
+
+.chartOrganisation {
+	background-image: url("../icons/fam/chart_organisation.png") !important;
+}
+
+.application_form {
+	background-image: url("../icons/fam/application_form.png") !important;
+}
+
+.application_form_add {
+	background-image: url("../icons/fam/application_form_add.png")
+		!important;
+}
+
+.application_form_delete {
+	background-image: url("../icons/fam/application_form_delete.png")
+		!important;
+}
+
+.arrow_right {
+	background-image: url("../icons/fam/arrow_right.png") !important;
+}
+
+.arrow_left {
+	background-image: url("../icons/fam/arrow_left.png") !important;
+}
+
+.addportalModel {
+	background-image: url("../icons/fam/addportalModel.png") !important;
+}
+
+.changeModel {
+	background-image: url("../icons/fam/changModel.png") !important;
+}
+
+.button_align_right {
+	text-align: right;
+	float: right;
+}
+
+.button_align_left {
+	text-align: left;
+	float: left;
+}
+
+input.button {
+	background: url(../../../../images/an1_1.jpg) repeat;
+	border: 1px solid #a2b4c2;
+	padding: 3px;
+	text-align: center;
+	vertical-align: middle;
+	height: 20px;
+	width: 100px;
+	color: #38455b;
+}
+
+.GridRefresh {
+	background-image: url("../icons/fam/table_refresh.png") !important;
+}
+
+/*
+*huangheng 20091022 add
+*/
+.KeywordSearch {
+	background-image: url( ../images/icon16/KeywordSearch.png) !important;
+}
+
+.KeywordSearch-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/KeywordSearch.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',src =   
+		 '/scripts/ext/desktop/images/icon48/KeywordSearch.png', sizingMethod =
+		 'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+*huangheng 20091024 add
+*/
+.dataMigration {
+	background-image: url(../icons/fam/connect.gif) !important;
+}
+
+/*
+*liukaiyuan 20091027 add
+*/
+.isStructure {
+	background-image: url("../icons/fam/book.png") !important;
+}
+
+/*
+*zhangwenbin 20091123
+*/
+.GridAutoCheckup {
+	background-image: url("../icons/fam/Grid_Data_AutoCheck.png") !important
+		;
+}
+
+.GridMakeCheckup {
+	background-image: url("../icons/fam/Grid_Data_MakeCheck.png") !important
+		;
+}
+
+
+.DestroyStructure-shortcut {
+	 clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/DestroyStructure.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DestroyStructure.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.DestroyStructure {
+	background-image: url( ../images/icon16/DestroyStructure.png) !important;
+}
+
+.DestroyManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/DestroyManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DestroyManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.FilingRule-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/FilingRule.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FilingRule.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.FilingRule {
+	background-image: url( ../images/icon16/FilingRule.png) !important;
+}
+
+.FilingManager {
+	background-image: url( ../images/icon16/FilingManager.gif) !important;
+}
+
+/**
+* houyu 20100103 
+*/
+.filterSearch {
+	background-image: url(../images/icon16/FilterSearch.gif) !important;
+}
+
+/**
+* jiangyuntao 20100105 
+*/
+.showChildData {
+	background-image: url(../images/icon16/download.gif) !important;
+}
+
+/**
+*zhangwenbin 20100112
+*/
+.ReportCenter-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ReportCenter.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ReportCenter.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ReportCenter {
+	background-image: url( ../images/icon16/ReportCenter.png) !important;
+}
+
+/*
+* huying 20100115 add
+*/
+.listItems {
+	background-image: url("../icons/fam/list-items.gif") !important;
+}
+
+/*
+* liukaiyuan 20100204 add
+*/
+.decorationnone {
+	TEXT-DECORATION: none;;
+	color: #E63F00
+}
+
+/**
+modify by yang 2010-04-19
+*/
+.NewMyModel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/NewMyModel.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/NewMyModel.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.NewMyModel {
+	background-image: url( ../images/icon16/NewMyModel.png) !important;
+}
+
+/**
+jiang add 20100202 FinishMyModel
+*/
+.FinishMyModel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/FinishMyModel.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FinishMyModel.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+
+/**
+houyu add 20100203 addFile addOpinion startWorkFlow lookWFPicture  saveWaitStart
+*/
+.addFile {
+	background-image: url(../icons/fam/addFile.png) !important;
+}
+
+.addOpinion {
+	background-image: url(../icons/fam/addOpinion.png) !important;
+}
+
+.startWorkFlow {
+	background-image: url(../icons/fam/startWorkFlow.png) !important;
+}
+
+.Griddestroy {
+	background-image: url("../icons/fam/Grid_Data_MakeDestroy.gif")
+		!important;
+}
+
+/**
+* jiang 20110929 add
+*/
+.GridGoBack {
+	background-image: url("../icons/fam/GridGoBack.png")
+		!important;
+}
+
+.doDestroy {
+	background-image: url("../icons/fam/doDestroy.png")
+		!important;
+}
+
+/**
+jiang add 20091130 formBuilder
+modify by yang 2010-04-20 png-->gif
+*/
+.FormBuilderManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/FormBuilderManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src =  '/scripts/ext/desktop/images/icon48/FormBuilderManager.png',
+		sizingMethod = 'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.FormBuilderManager {
+	background-image: url( ../images/icon16/FormBuilderManager.png)
+		!important;
+}
+
+/*
+* fuhongyi 20100011 add ColligateSearch
+modify by yang 2010-04-19 png-->gif
+*/
+
+.ColligateSearch-shortcut {
+
+    clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ColligateSearch.png) top no-repeat;/**zhengfang 20100930 change gif to png**/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ColligateSearch.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ColligateSearch {
+	background-image: url( ../images/icon16/ColligateSearch.png) !important;
+}
+
+.lookWFPicture {
+	background-image: url(../icons/fam/lookWFPicture.png) !important;
+}
+
+.saveWaitStart {
+	background-image: url(../icons/fam/saveWaitStart.png) !important;
+}
+
+/*
+*lizhiqing add
+*/
+.fullToArc {
+	background-image: url(../icons/fam/folder_go.png) !important;
+}
+
+.selectToArc {
+	background-image: url(../icons/fam/changModel.png) !important;
+}
+
+.dataCallback {
+	background-image: url(../icons/fam/Grid_Back.gif) !important;
+}
+
+.refreArcId {
+	background-image: url(../icons/fam/table_refresh.png) !important;
+}
+
+.organArc {
+	background-image: url(../icons/fam/user.gif) !important;
+}
+
+/*
+*jiangyuntao add
+*/
+.addtype {
+	background-image: url(../icons/fam/addtype.gif) !important;
+}
+
+.droptype {
+	background-image: url(../icons/fam/droptype.gif) !important;
+}
+
+.edittype {
+	background-image: url(../icons/fam/edittype.gif) !important;
+}
+
+/*
+*houyu 20100310 add
+*/
+.selectWfForward {
+	background-image: url(../icons/fam/selectWfForward.png) !important;
+}
+
+.startWfForward {
+	background-image: url(../icons/fam/startWfForward.png) !important;
+}
+
+.lookSended {
+	background-image: url(../icons/fam/lookSended.png) !important;
+}
+
+.lookForward {
+	background-image: url(../icons/fam/lookForward.png) !important;
+}
+
+.frombuilderStat {
+	background-image: url(../icons/fam/formbuilderStat.gif) !important;
+}
+
+.WfFormAuthorize-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/wfFormRight.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/wfFormRight.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.WfFormAuthorize {
+	background-image: url( ../images/icon16/wfFormRight.png) !important;
+}
+
+.WorkFlowMonitor-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/WorkFlowMonitor.png)  top no-repeat;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src = '/scripts/ext/desktop/images/icon48/WorkFlowMonitor.png', sizingMethod
+		= 'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.WorkFlowMonitor {
+	background-image: url( ../images/icon16/WorkFlowMonitor.png) !important;
+}
+
+/*
+*jiangyuntao
+*/
+.wfdeletedata {
+	background-image: url(../icons/fam/wfdelete.gif) !important;
+}
+
+/*
+*anjihui 2o100323
+*/
+.FileManageCentral-shortcut {
+	width: 48px;;
+	height: 48px;
+	background-image: url(../images/icon48/fileLifeCycle.png);
+	filter: progid :   DXImageTransform . Microsoft .
+		AlphaImageLoader(src =  
+		'/scripts/ext/desktop/images/icon48/fileLifeCycle.png', sizingMethod =
+		'scale');
+}
+
+.FileManageCentral {
+	background-image: url( ../images/icon16/fileLifeCycle.png) !important;
+}
+
+.EssDocument-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background-image: url(../images/icon48/documentLib.png);
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/documentLib.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.EssDocument {
+	background-image: url( ../images/icon16/documentLib.png) !important;
+}
+
+.DocumentManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/documentManag.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/documentManag.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.DocumentManager {
+	background-image: url( ../images/icon16/documentManag.png) !important;
+}
+
+.FileModelManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/FileModelManage.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/FileModelManage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.FileModelManage {
+	background-image: url( ../images/icon16/FileModelManage.png) !important;
+}
+
+.docCheckIn {
+	background-image: url( ../images/icon16/docCheckIn.gif) !important;
+}
+
+.docCheckOut {
+	background-image: url( ../images/icon16/docCheckOut.gif) !important;
+}
+
+.docEffect {
+	background-image: url( ../images/icon16/docEffect.gif) !important;
+}
+
+.docDesroty {
+	background-image: url( ../images/icon16/docDesroty.gif) !important;
+}
+
+.docDistribute {
+	background-image: url( ../images/icon16/docDistribute.gif) !important;
+}
+
+.docFilling {
+	background-image: url( ../images/icon16/document_filling.gif) !important;
+}
+
+.excel {
+	background-image: url( ../images/icon16/excel.gif) !important;
+}
+
+.word {
+	background-image: url( ../images/icon16/word.gif) !important;
+}
+
+
+/*
+*ninglong add 
+*/
+.DataTransformation-shortcut {
+
+clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/MediaReplaceTasks.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MediaReplaceTasks.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.DataTransformation {
+	background-image: url( ../images/icon16/MediaReplaceTasks.png)
+		!important;
+}
+
+.AutoUpdate {
+	background-image: url( ../images/icon16/defineMyMenu.png) !important;
+}
+
+.AutoUpdate-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/defineMyMenu.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 
+		 '/scripts/ext/desktop/images/icon48/defineMyMenu.png', sizingMethod = 
+		 'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*end
+*/ /*
+*liukaiyuan add  20100320
+*/
+.topic {
+	padding-left: 20px;
+	background: transparent url(../icons/fam/post.gif) no-repeat 0 -1px;
+}
+
+.star {
+	background: transparent url(../icons/fam/star.png) !important
+		border-style : none;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;;
+	CURSOR: hand;
+}
+
+.ordercart {
+	background: transparent url(../icons/fam/ordercart.png) !important
+		border-style : none;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;;
+	CURSOR: hand;
+}
+
+.ordercancel {
+	background: transparent url(../icons/fam/cancel-1.png) !important
+		border-style : none;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;;
+	CURSOR: hand;
+}
+/*
+*xiaoxiong 20100618 add
+*/
+.changeField {
+	background: transparent url(../icons/fam/receiveFile.png) !important
+		border-style : none;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;;
+	CURSOR: hand;
+}
+
+.preview .x-panel-body {
+	background: #fff;
+	color: #222;
+	font: normal 12px tahoma, verdana, arial, sans-serif;
+}
+
+.preview .x-panel-body p {
+	line-height: 18px;
+	margin: 8px 0;
+}
+
+.preview .x-panel-body ul {
+	margin-left: 18px;
+}
+
+.preview .x-panel-body ul li {
+	display: list-item;
+	list-style-image: none !important;
+	list-style-position: outside !important;
+	list-style-type: disc !important;
+	margin-left: 18px;
+}
+
+.preview .x-panel-body pre,#preview .x-panel-body code {
+	background: #f1f1f1;
+	display: block;
+}
+
+.preview .x-panel-body h4.post-author {
+	font-weight: normal;
+	color: #555;
+	font-size: 11px;
+}
+
+.preview .x-panel-body span.post-date {
+	font-weight: normal;
+	color: #555;
+	float: right;
+	font-size: 11px;
+}
+
+.preview .x-panel-body div.post-data {
+	background: #f1f2f4;
+	padding: 5px;
+	border-bottom: 1px solid #dadadb;
+}
+
+.preview .x-panel-body div.post-body {
+	padding: 10px;
+}
+
+.preview-bottom {
+	background-image: url(../icons/fam/preview-bottom.gif) !important;
+}
+
+.preview-right {
+	background-image: url(../icons/fam/preview-right.gif) !important;
+}
+
+.preview-hide {
+	background-image: url(../icons/fam/preview-hide.gif) !important;
+}
+
+.reading-menu .x-menu-item-checked {
+	border: 1px dotted #a3bae9 !important;
+	background: #DFE8F6;
+	padding: 0;
+}
+
+.summary {
+	background-image: url(../icons/fam/details.gif) !important;
+}
+
+.bitstreamList {
+	padding-left: 20px;
+	background: transparent url(../icons/fam/page_attach.png) no-repeat 0
+		0px;
+}
+
+.secondKeysearch {
+	background-image: url(../icons/fam/zoom_in.png) !important;
+}
+
+.bitstreaViweOrDownLoad {
+	background: transparent url(../icons/fam/folder_image.png) !important
+		border-style : none;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;;
+	CURSOR: hand;
+}
+
+/*
+*liukaiyuan add end 20100320
+*/ /*
+*zhangwenbin add grid edit 2010042
+*/
+.edit {
+	background-image: url( ../icons/fam/plugin.gif ) !important;
+}
+/*lizengcun qidong tingzhi button
+*/
+.startup{
+	background-image: url( ../icons/fam/startup.gif ) !important;
+}
+.shutdown{
+	background-image: url( ../icons/fam/shutdown.gif ) !important;
+}
+.down {
+	background-image: url( ../icons/fam/download.gif ) !important;
+}
+
+/*
+* fuhongyi 2010403 add essMessage
+modify by yang 2010-04-19
+*/
+.EssMessage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/EssMessage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/EssMessage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.EssMessage {
+	background-image: url( ../images/icon16/EssMessage.png) !important;
+}
+/*
+shilongfei 20101201
+*/
+.SynonymGroup-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/SynonymGroup.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/SynonymGroup.png");
+	_background:none;
+}
+
+/**
+*zhangwenbin 20100403 
+*/
+.UnlineEditor-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/UnlineEditor.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/UnlineEditor.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/*
+  yuzhijia 20110211 
+*/
+.SystemInitExport-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/SystemInitExport.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/SystemInitExport.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/*
+  yuzhijia 20110311 
+*/
+.SystemInitImport-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/SystemInitImport.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/SystemInitImport.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.UnlineEditor {
+	background-image: url( ../images/icon16/UnlineEditor.png) !important;
+}
+
+/**
+*zhangyuanxi 20100412 
+*/
+.ReadingRoom {
+	background-image: url( ../images/icon48/KeywordSearch.png) !important;
+}
+
+.ReadingRoomComputer-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/ReadingRoomComputer.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ReadingRoomComputer.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ReadingRoomComputer {
+	background-image: url( ../images/icon16/ReadingRoomComputer.png) !important;
+}
+
+.ReadingRoomChargePlan-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ReadingRoomChargePlan.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/ReadingRoomChargePlan.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+zhangyuanxi 20100423 modify
+*/
+.ReadingRoomChargePlan {
+	background-image: url( ../images/icon16/ReadingRoomChargePlan.png) !important;
+}
+
+/**
+modify by yang 2010-04-19
+*/
+.readingRoomControl-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/readingRoomControl.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/readingRoomControl.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.readingRoomControl {
+	background-image: url( ../images/icon16/readingRoomControl.png)
+		!important;
+}
+
+.BusinessManager {
+	background-image: url( ../images/icon16/BusinessManager.png) !important;
+		
+}
+
+.BusinessManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/BusinessManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/BusinessManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+* huying end 20100408 
+*/ /**
+*liukaiyuan  add 20100412
+*/
+#fulltext-images-view .x-view-selected {
+	background: #eff5fb url(images/selected.gif) no-repeat right bottom;
+	border: 1px solid #99bbe8;
+	padding: 4px;
+}
+
+#fulltext-images-view .x-view-selected .thumb {
+	background: transparent;
+}
+
+#fulltext-images-view .loading-indicator {
+	font-size: 11px;
+	background-image: url('../../resources/images/default/grid/loading.gif')
+		;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 20px;
+	margin: 10px;
+}
+
+#fulltext-images-view .thumb-wrap span {
+	width:95px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+#fulltext-images-view .x-panel-body {
+	background: white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#fulltext-images-view .thumb {
+	padding: 3px;
+}
+
+#fulltext-images-view .thuimg {
+	height: 60px;
+	width: 80px;
+}
+
+/* luowenfei 20100413 add */
+.GridgroupSearch {
+	background-image: url("../icons/fam/Grid_Group_Search.png") !important;
+}
+
+/*
+* jiang add copy css 20100412
+*/
+.copy {
+	background-image: url( ../icons/fam/copy.gif ) !important;
+}
+
+.wfAll {
+	background-image: url(../icons/fam/wf_all.png) !important;
+}
+
+.wfActive {
+	background-image: url(../icons/fam/wf_active.png) !important;
+}
+
+.wfOver {
+	background-image: url(../icons/fam/wf_over.png) !important;
+}
+
+/**
+*zhengfang 20100415 add
+*/
+.EssSystem {
+	background-image: url( ../images/icon16/menuMange.png) !important;
+}
+
+.EssSystem-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/menuMange.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/menuMange.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+*yang 2010-04-19 add
+*/
+.WorkInSync {
+	background-image: url( ../images/icon16/WorkInSync.png) !important;
+}
+
+.WorkInSync-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/WorkInSync.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/WorkInSync.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+/**
+*yang 2010-04-19 add
+*/
+.MyModels {
+	background-image: url( ../images/icon16/MyModels.png) !important;
+}
+.MyModels-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/MyModels.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MyModels.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+*yang 2010-04-19 add
+*/
+.PrepareMyModel {
+	background-image: url( ../images/icon16/PrepareMyModel.png) !important;
+}
+
+.PrepareMyModel-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/PrepareMyModel.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src ='/scripts/ext/desktop/images/icon48/PrepareMyModel.png', 
+		sizingMethod ='scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+*yang 2010-04-19 add
+*/
+.PrepareDeal {
+	background-image: url( ../images/icon16/PrepareDeal.png) !important;
+}
+
+.PrepareDeal-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/PrepareDeal.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/PrepareDeal.png");
+	_background:none;/**zhengfang 20100928 add*/	
+	margin-left: 8px;margin-left: 0px\9;	
+}
+
+/**
+*yang 2010-04-19 add
+*/
+.FinishMyModel {
+	background-image: url( ../images/icon16/FinishMyModel.png) !important;
+}
+
+/**
+*yang 2010-04-19 add
+*/
+.ArchiveStats {
+	background-image: url( ../images/icon16/ArchiveStats.png) !important;
+}
+.ArchiveStats-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchiveStats.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveStats.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+
+/**
+*yang 2010-04-19 add
+*/
+.StatisticsCollectionManager {
+	background-image: url( ../images/icon16/StatisticsCollectionManager.png)
+		!important;
+}
+
+.StatisticsCollectionManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/StatisticsCollectionManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/StatisticsCollectionManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;	
+}
+
+/**
+*yang 2010-04-19 add DataManager
+*/
+.DataManager {
+	background-image: url( ../images/icon16/DataManager.png) !important;
+}
+
+/**
+*yang 2010-04-19 add DestroyManager
+*/
+.DestroyManager {
+	background-image: url( ../images/icon16/DestroyManager.png) !important;
+}
+
+.DestroyManager-shortcut {
+	width: 48px;
+	height: 48px;
+	background-image: url(../images/icon48/DestroyManager.png);
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DestroyManager.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+* fuhongyi 201000417 add MessageManage
+*/
+.MessageManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/MessageManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src = '/scripts/ext/desktop/images/icon48/MessageManage.png', sizingMethod =
+		'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.MessageManage {
+	background-image: url( ../images/icon16/MessageManage.png) !important;
+}
+
+/**
+*yang 2010-04-22 add LogManager
+*/
+.LogManager {
+	background-image: url( ../images/icon16/LogManager.png) !important;
+}
+
+.LogManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/LogManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/LogManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+*huying 20100422 add usingManager status
+*/
+.ArchiveUsingRegisterRule {
+	background-image: url( ../images/icon16/SystemManage.png) !important;
+}
+
+.ArchiveUsingRegister {
+	background-image: url( ../images/icon16/UsingManager.png) !important;
+}
+
+.ArchiveUsingRegisterRule-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ArchiveUsingRegisterRule.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveUsingRegisterRule.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveUsingRegister-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/UsingManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/UsingManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.UsingStatistics {
+	background-image: url( ../images/icon16/AccessCentral.png) !important;
+}
+
+.UsingStatistics-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/UsingStatistics.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/UsingStatistics.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ArchiveUsingRegisterReturn {
+	background-image: url( ../images/icon16/ArchiveMoving.png) !important;
+}
+
+.ArchiveUsingRegisterReturn-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/ArchiveMoving.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ArchiveMoving.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.status1 {
+	background-image: url("../icons/fam/zoom.png") !important;
+}
+
+.status2 {
+	background-image: url("../icons/fam/page_attach.png") !important;
+}
+
+.status3 {
+	background-image: url("../icons/fam/Grid_Data_Export.gif") !important;
+}
+
+.status4 {
+	background-image: url("../icons/fam/Grid_Batch_Bitstream.gif")
+		!important;
+}
+
+.status5 {
+	background-image: url("../icons/fam/Grid_Data_Import.gif") !important;
+}
+
+.consult {
+	background: transparent url("../icons/fam/zoom.png") !important
+		border-style : none;
+	width: 16px;
+	height: 16px;
+	CURSOR: hand;
+}
+
+.bespoke {
+	background: transparent url("../icons/fam/page_attach.png") !important
+		border-style : none;
+	width: 16px;
+	height: 16px;
+	CURSOR: hand;
+}
+
+.lend {
+	background: transparent url("../icons/fam/Grid_Data_Export.gif")
+		!important border-style : none;
+	width: 16px;
+	height: 16px;
+	CURSOR: hand;
+}
+
+/*
+* end huying 
+*/ /**
+*ninglong 20100406 
+*/
+
+.DataFileTransformation-shortcut{
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/DataFileTransformation.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/DataFileTransformation.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.DataFileTransformation {
+	background-image: url( ../images/icon16/DataFileTransformation.png) !important;
+}
+
+.Datafile {
+	margin: 30, 30, 60, 30;
+}
+
+.lab {
+	font-size: 13;
+}
+
+/**
+*liukaiyuan 20100423 
+*/
+.SingleSignOnKey {
+	background-image: url( ../icons/fam/computer_key.png) !important;
+}
+/**
+*lizhiqing 20100428
+*/
+.keyword_image {
+	background-image: url("../images/fam/application_view_tile.png") !important;
+}
+.keyword_image_flex {
+	background-image: url("../images/fam/application_view_gallery.png") !important;
+}
+/**
+*houyu 20100423 add yearNewspaperTreeEdit MergeYearNewspaper
+*/
+.YnTreeEdit {
+	background-image: url( ../images/icon16/YnTreeEdit.png) !important;
+}
+.MergeYn {
+	background-image: url( ../images/icon16/MergeYn.png) !important;
+}
+.STYLE1 {font-size: 12px}
+.STYLE2 {font-size: 12}
+
+/*jiangyutao 20100429 start*/
+.DistributedfulltextSearch-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/DistributedFulltext.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DistributedFulltext.png");
+	_background:none;/**zhengfang 20100928 add*/	
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.DistributedfulltextManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/DistributedFulltextManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DistributedFulltextManage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.DistributedfulltextSearch {
+	background-image: url( ../images/icon16/DistributedFulltext.png) !important;
+}
+
+.DistributedfulltextManager {
+	background-image: url( ../images/icon16/DistributedFulltextManage.png) !important;
+}
+/*jiangyutao 20100429 end*/
+
+/*jiangyutao 20100514 start*/
+.worklogManage-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/worklogManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/worklogManage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.worklogManageRole-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/worklogAuthorize.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		src ='/scripts/ext/desktop/images/icon48/worklogAuthorize.png',
+		sizingMethod =   'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.UserWorkLog-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/UserWorkLog.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/UserWorkLog.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.worklogManage {
+	background-image: url( ../images/icon16/worklogManage.png) !important;
+}
+.worklogManageRole {
+	background-image: url( ../images/icon16/worklogAuthorize.png) !important;
+}
+.UserWorkLog {
+	background-image: url( ../images/icon16/UserWorkLog.png) !important;
+}
+.worklog {
+	background-image: url( ../images/icon16/worklog.png) !important;
+}
+/*jiangyutao 20100514 end*/
+/**zhengfang 20100520  add*/
+.systemMennuRoot {
+	background-image: url( ../images/icon16/FormBuilderManager.png)
+		!important;
+}
+/*jiangyuntao 20100527 add start*/
+.deliverManagers-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/deliverManage.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/deliverManage.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+.deliverManageRole-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/deliverRole.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/deliverRole.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.deliverManagers {
+	background-image: url( ../images/icon16/deliverManage.png) !important;
+}
+.deliverManageRole {
+	background-image: url( ../images/icon16/deliverRole.png) !important;
+}
+.deliverManage {
+	background-image: url( ../images/icon16/deliverMgr.gif) !important;
+}
+/*jiangyuntao 20100527 add end*/
+
+/*liuqiang 20100607 add for essantistop*/
+.EssAntistop {
+	background-image: url( ../images/icon16/EssAntistop.png) !important;
+}
+
+.EssAntistop-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/EssAntistop.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/EssAntistop.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*liuqiang add end*/
+
+
+/* xiaoxiong 20100624 add flying */
+.oaWorkflow {
+	background-image: url( ../images/icon16/oaWorkflow.png) !important;
+}
+
+.oaWorkflow-shortcut {
+	clear:both;
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/oaWorkflow.png);
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/oaWorkflow.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/* end */
+
+/* ninglong20100623 add for */
+.newEventItem {
+	background-image: url( ../images/icon16/newEventItem.png) !important;
+}
+
+.newEventItem-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/newEventItem.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/newEventItem.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+/* ninglong add end */
+
+
+/*fuhongyi 20100627*/
+.ButletinManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/ButletinManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ButletinManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ButletinManager {
+	background-image: url( ../images/icon16/ButletinManager.png) !important;
+}
+
+/* xiaoxiong 20100624 add flying */
+.AssignedWorkflow {
+	background-image: url( ../images/icon16/AssignedWorkflow.png) !important;
+}
+
+.AssignedWorkflow-shortcut {
+	clear:both;
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/AssignedWorkflow.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src ="/scripts/ext/desktop/images/icon48/AssignedWorkflow.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/* end */
+
+/* wuxiaoxu 20100916 formBuilderStatistics */
+.borderTest {
+	background-image: url( ../images/icon16/collaborativeManage.png) !important;
+}
+
+/**
+*wuxiaoxu 20100720 add  
+*/
+.borderTest-shortcut {
+	clear:both;
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/collaborativeManage.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src ="/scripts/ext/desktop/images/icon48/collaborativeManage.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+
+
+/*haojianke 20100625 add for Resource Warning --begin*/
+.ResourceWarning {
+	background-image: url( ../images/icon16/ResourceWarning.png) !important;
+}
+
+.ResourceWarning-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/ResourceWarning.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ResourceWarning.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.ResourceWarning_server {
+	background-image: url( ../images/icon16/ResourceWarning_server.png)
+		!important;
+}
+
+.ResourceWarning_disk {
+	background-image: url( ../images/icon16/ResourceWarning_disk.png)
+		!important;
+}
+
+.ResourceWarning_cpu {
+	background-image: url( ../images/icon16/ResourceWarning_cpu.png)
+		!important;
+}
+
+.ResourceWarning_memory {
+	background-image: url( ../images/icon16/ResourceWarning_memory.png)
+		!important;
+}
+
+.ResourceWarning_network {
+	background-image: url( ../images/icon16/ResourceWarning_network.png)
+		!important;
+}
+
+.ResourceWarning_os {
+	background-image: url( ../images/icon16/ResourceWarning_os.png)
+		!important;
+}
+
+.ResourceWarning_user {
+	background-image: url( ../images/icon16/ResourceWarning_user.png)
+		!important;
+}
+
+.warning_x-view-over {
+	background: #ffffff;
+	cursor:hand;
+}
+/*haojianke 20100625 add for Resource Warning --end*/
+
+
+
+/*end 20100720*/
+
+/* end */
+
+/*wuxiaoxu 20100709*/
+.SeceryManager {
+	background-image: url( ../images/icon16/ButletinRightManager.png) !important;
+}
+
+.ButletinRightManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ButletinRightManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ButletinRightManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+/* end */
+/*ninglong20100723*/
+.deal{
+	background-image: url(../icons/fam/edittype.gif) !important;
+}
+.nodeal{
+	background-image: url(../icons/fam/droptype.gif) !important;
+}
+/*end ninglong*/
+/*fuhongyi 20100728*/
+.SendButton {
+	background-image: url( ../images/icon16/SendButton.png) !important;
+}
+.CloseButton {
+	background-image: url( ../images/icon16/CloseButton.png) !important;
+}
+.AllButton {
+	background-image: url( ../images/icon16/AllButton.png) !important;
+}
+/* end */
+/*
+fuhongyi 20100823 add button
+*/
+.MsgOver {
+	background-image: url(../images/icon16/MsgOver.png) !important;
+}
+.MsgRun {
+	background-image: url(../images/icon16/MsgRun.png) !important;
+}
+.MsgAll {
+	background-image: url(../images/icon16/MsgAll.png) !important;
+}
+/* end */
+
+/*
+	xiaoixong 20100919 add
+*/
+.selectFormModelsType {
+	background-image: url("../icons/fam/selectFormModelsType.png")
+		!important;
+}
+/**zhengfang 20100930 add*/
+.MaterialManager-shortcut{
+	clear:both;/**zhengfang 20100928 add*/
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/MaterialManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MaterialManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+/*wuxiaoxu */
+.DailyManager {
+	background-image: url( ../images/icon16/MaterialManager.png) !important;
+}
+.PresalesManager-shortcut{
+	clear:both;/**zhengfang 20100928 add*/
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/PresalesManager.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/PresalesManager.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.PresalesManager {
+	background-image: url( ../images/icon16/PresalesManager.png) !important;
+}
+
+
+/*
+ *add wangfei 20110414
+ */
+.DocumentConfig-shortcut{
+	clear:both;/**zhengfang 20100928 add*/
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/DocumentConfig.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DocumentConfig.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.DocumentConfig {
+	background-image: url( ../images/icon16/DocumentConfig.png) !important;
+}
+
+/*
+fuhongyi 201001011 cross button
+*/
+.cross {
+	background-image: url(../icons/fam/cross.gif) !important;
+}
+/* end */
+
+/*
+*xiaoxiong 20101019
+*/
+.addLink {
+	background-image: url("../icons/fam/addLink.png") !important;
+}
+.dropLink {
+	background-image: url("../icons/fam/dropLink.png") !important;
+}
+/* end */
+
+/*
+*xiaoxiong 20101022
+*/
+.prev {
+	background-image: url("../icons/fam/prev.png") !important;
+}
+.next {
+	background-image: url("../icons/fam/next.png") !important;
+}
+.complete {
+	background-image: url("../icons/fam/Complete.png") !important;
+}
+.Cancel_2 {
+	background-image: url("../icons/fam/Cancel_2.png") !important;
+}
+/* end */
+/*
+*jiang 20101120
+*/
+.numberfield_align{ 
+    text-align: right;
+}
+/*
+*zhangyuanxi 20101122 add
+*/
+.copy {
+	background-image: url(../icons/fam/copy.png) !important;
+}
+.cut {
+	background-image: url(../icons/fam/cut.png) !important;
+}
+.paste {
+	background-image: url(../icons/fam/paste.png) !important;
+}
+.insertArchive {
+	background-image: url(../icons/fam/insertArchive.png) !important;
+}
+.deleteArchive {
+	background-image: url(../icons/fam/deleteArchive.png) !important;
+}
+.compArchive {    
+	background-image: url(../icons/fam/compArchive.png) !important;
+}
+.exchangeArchive {
+	background-image: url(../icons/fam/exchange.png) !important;
+}
+/**zhengfang 20101221 add*/
+.userOrganButton {
+	margin-top: -20px;
+	margin-left:356px;
+}
+
+.listItems_lable label{
+	background:url(../icons/fam/list-items.gif) no-repeat;
+	background-position: 0 2px;
+	display: block;
+	float: left;
+	width: 100px;
+	height: 16px;
+	line-height:16px;
+	//padding-left: 26px;
+	padding: 3px 0 2px 21px;
+}
+/**fuhongyi 20110211 add*/
+.resetBtn {
+	background-image: url(../icons/fam/resetBtn.png) !important;
+}
+
+/**
+*zhangwenbin 20110215
+*/
+.MyFileDownManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/MyFileDown.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/MyFileDown.png");
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.MyFileDownManager {
+	background-image: url( ../images/icon16/MyFileDown.png) !important;
+}
+
+.myFileDown {
+	background-image: url( ../icons/fam/fileDown.png ) !important;
+}
+/**
+*zhengfang 20110301
+*/
+.aboutPicture {
+	background-image: url("../images/fam/aboutPicture.png") !important;
+}
+
+/**
+*mayuxue 20110628
+*/
+.FondsManagement-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/FondsManagement.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/FondsManagement.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.FondsManagement {
+	background-image: url( ../images/icon16/FondsManagement.png) !important;
+}
+
+.TransferManagementPlan-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/TransferManagementPlan.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/TransferManagementPlan.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.TransferManagementPlan {
+	background-image: url( ../images/icon16/TransferManagementPlan.png) !important;
+}
+
+
+/*
+jiqingxia 20110629
+*/
+.DatabaseBackup{
+	background-image: url( ../images/icon16/DatabaseBackup.png) !important;
+}
+/*
+jiqingxia 20110629
+*/
+.DatabaseBackup-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/DatabaseBackup.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/DatabaseBackup.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/**
+*zhangyuanxi 20110705
+*/
+.monitorManage{
+	background-image: url( ../images/icon16/monitorManage.png) !important;
+}
+.monitorManage-shortcut{
+	clear:both;
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/monitorManage.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/monitorManage.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+*zhangwenbin 20110718
+*/
+.fileCenterManage{
+	background-image: url( ../images/icon16/fileCenter.png) !important;
+}
+.fileCenterManage-shortcut{
+	clear:both;
+	width: 48px;;
+	height: 48px;
+	background: url(../images/icon48/fileCenter.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/fileCenter.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/**
+*zhangyuanxi 20110727
+*/
+.contentCenter{
+	background-image: url( ../images/icon16/ContentCenter.png) !important;
+}
+.contentCenter-shortcut{
+	clear:both;
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/fileCenter.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ContentCenter.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/*
+* Yang add 2011-07-15
+*/
+.ProjectManager {
+	background-image: url( ../images/icon16/ProjectManager.png) !important;
+}
+
+.ProjectManager-shortcut {
+	clear:both;
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/ProjectManager.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ProjectManager.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/*
+* Yang add 2011-07-21
+*/
+.do-checkout {
+	background-image: url( ../icons/fam/checkout.png ) !important;
+}
+.do-ProjStatis {
+	background-image: url( ../icons/fam/chart_bar.png ) !important;
+}
+.do-ProjDelyPay {
+	background-image: url( ../icons/fam/money_yen.png ) !important;
+}
+
+/**
+ * mayuxue add 20110804
+ */
+.ElectronicReadingRoom-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/ElectronicReadingRoom.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/ElectronicReadingRoom.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.ElectronicReadingRoom {
+	background-image: url( ../images/icon16/ElectronicReadingRoom.png) !important;
+}
+/**
+*jiqingxia 20110801
+*/
+.WarehouseManager{
+	background-image: url( ../images/icon16/Warehouse.png) !important;
+}
+.WarehouseManager-shortcut{
+	clear:both;
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/Warehouse.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/Warehouse.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+/**
+*jiqingxia 20110803
+*/
+.register {
+	background-image: url("../icons/fam/register.png") !important;
+}
+.printTwoBarcode {
+	background-image: url("../icons/fam/printTwoBarcode.png") !important;
+}
+
+/**
+*zhangyuanxi 20110804
+*/
+.ContentCenterZip{
+	background-image: url( ../images/icon16/ContentCenterZip.png) !important;
+}
+.ContentCenterZip-shortcut{
+	clear:both;
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/fileCenter.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ContentCenterZip.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/**
+*wuxiaoxu add ˵��
+*/
+.Instructions{
+	background-image: url( ../images/icon16/ContentCenterManager.png) !important;
+}
+.Instructions-shortcut{
+	clear:both;
+	width: 48px;  
+	height: 48px;
+	background: url(../images/icon48/fileCenter.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+		sizingMethod='scale',
+		src="/scripts/ext/desktop/images/icon48/ContentCenterManager.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+.Issued {
+	background-image: url(../icons/Issued.png) !important;
+}
+
+/**
+*jiqingxia 20110812
+*/
+.scanReturn {
+	background-image: url("../icons/fam/scanReturn.png") !important;
+}
+
+/*
+*jiqingxia 20110816
+*/
+.archiveStatistic {
+	background-image: url("../icons/fam/archiveStatistic.png") !important;
+}
+/*lizengcun 20110830
+*/
+.TreePaneldiv {
+	background-image: url( ../images/icon16/allsearch.png) !important;
+}
+.TreePaneldiv-shortcut {
+	clear:both;
+	width:48px;
+	height:48px;
+	background:url(../images/icon48/allsearch.png) top no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',
+	sizingMethod='scale',
+	src="/scripts/ext/desktop/images/icon48/allsearch.png");
+	_background:none;
+	margin-left: 8px;margin-left: 0px\9;
+}
+.SellManager {
+	background-image: url( ../images/icon16/KeywordSearch.png) !important;
+}
+.SellManager-shortcut {
+	clear:both;/**zhengfang 20100928 add*/
+	width: 48px;
+	height: 48px;
+	background: url(../images/icon48/KeywordSearch.png) top no-repeat;/**zhengfang 20100928 change gif to png*/
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',src =   
+		 '/scripts/ext/desktop/images/icon48/KeywordSearch.png', sizingMethod =
+		 'scale');
+	_background:none;/**zhengfang 20100928 add*/
+	margin-left: 8px;margin-left: 0px\9;
+}
+
+/** xiaoxiong 20110907 **/
+.acceptReportedPlate {
+	background-image: url("../icons/fam/acceptReportedPlate.png") !important;
+}
+.formReportedPlate {
+	background-image: url("../icons/fam/formReportedPlate.png") !important;
+}
+.addToDesMenu{
+	background-image: url(" ../images/addToDesMenu.png") !important;
+}
+
